@@ -1,0 +1,38 @@
+[
+    {
+        "Name" :"Peguet Pars",
+        "text":"Pars is a very good prduction from pegute company and it is mad in iran iranian peopel like this car very mach",
+        "company" : "Pegute",
+        "image" :"../public/images/0Y328c97Gl5zpdcxQgPZ8isjDp4ENae1A1ffko6XWgAjbqKeSZ0ImUH3LxvE--392x190.jpg"
+    },
+    {
+        "Name" :"Samand",
+        "text":"samand is a very good prduction from IranKhodro company and it is mad in iran iranian peopel like this car very mach",
+        "company" : "Irankhodro",
+        "image" :"../public/images/62422.jpg"
+    },
+    {
+        "Name" :"Suntafey",
+        "text":"Suntafey is a very good prduction from Hyunda company and it is mad in iran iranian peopel like this car very mach",
+        "company" : "Hyunda",
+        "image" :"../public/images/71663170-2ba9-11ef-8a9f-3397e41e1717.jpg"
+    },
+    {
+        "Name" :"Perayde",
+        "text":"Perayde is a very good prduction from Saypa company and it is mad in iran iranian peopel like this car very mach",
+        "company" : "Saypa",
+        "image" :"../public/images/dsdw.jpg"
+    },
+    {
+        "Name" :"Jack S5",
+        "text":"Jack S5 is a very good prduction from Jack company and it is mad in iran iranian peopel like this car very mach",
+        "company" : "Jack",
+        "image" :"../public/images/ef856680-404e-11ef-adf4-ed2e9c84b7e9.jpg"
+    },
+    {
+        "Name" :"Dena+",
+        "text":"Dena+ is a very good prduction from IranKhodro company and it is mad in iran iranian peopel like this car very mach",
+        "company" : "IranKhodro",
+        "image" :"../public/images/دنا-پلاس-توربو-اتوماتیک.jpg"
+    }
+]

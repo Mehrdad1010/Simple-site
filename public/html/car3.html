@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>HomePage</title>
+</head>
+
+<body>
+    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg  fixed-top bg-body-tertiary"
+        data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GaleryBaz</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Contact">Contact</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bodycards">
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "/data", success: function (data) {
+
+
+                    var continer = $(`<div class="continer col-lg-12 d-flex justify-content-center px-4 py-4"></div>`);
+                    var card = $(`<div class="card" style="width: 90%;"></div>`);
+                    var img = $(` <img src=car${3} class="card-img-top" alt="fig-car">`);
+                    var card_body = $(`<div class="card-body"></div>`);
+                    var card_titel = $(`<h5 class="card-title">${data[3]["Name"]}</h5>`);
+                    var card_text = $(`<p class="card-text">${data[3]["text"]}</p>`);
+                    var list_grup = $(`<ul class="list-group list-group-flush"></ul>`);
+                    var list_grup_itme = $(`<li class="list-group-item">${data[3]["company"]}</li>`);
+                    var card_buttm = $(`<div class="card-body"></div>`);
+                    var btn = $(`<a href="/Home" class="btn btn-primary">Home</a>`)
+
+                    // append childs to the parents and set them to the page
+                    card_body.append(card_titel, card_text)
+                    list_grup.append(list_grup_itme)
+                    card_buttm.append(btn)
+                    card.append(img, card_body, list_grup, card_buttm)
+                    continer.append(card)
+
+                    // send the main wraper to the page
+                    $(".bodycards").append(continer);
+                }
+            })
+        })
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
